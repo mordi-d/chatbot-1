@@ -151,7 +151,7 @@ class Client(object):
 		response = self.session.post(self.wiki + "/api.php",data=login_data)
 		content = json.loads(response.content)
 		if content['login']['result'] != 'Success':
-			print 'Couldn\'t log in: Quitting.'
+			print('Couldn\'t log in: Quitting.')
 			sys.exit(1)
 
 	def __wikia_request(self, **kwargs):
